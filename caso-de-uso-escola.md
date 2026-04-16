@@ -2,9 +2,9 @@
 
 ```mermaid
 flowchart LR
-    Aluno["👤 Aluno"]
-    Professor["👤 Professor"]
-    Secretaria["👤 Secretaria"]
+    Aluno["Aluno"]
+    Professor["Professor"]
+    Secretaria["Secretaria"]
 
     subgraph SistemaEscolar["Sistema Escolar"]
         UC1((Consultar notas))
