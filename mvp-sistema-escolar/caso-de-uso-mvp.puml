@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+actor Aluno
+
+rectangle SistemaEscolarMVP {
+  usecase "Fazer login" as UC1
+  usecase "Consultar notas" as UC2
+  usecase "Autenticar usuário" as UC3
+}
+
+Aluno --> UC1
+Aluno --> UC2
+UC2 ..> UC3 : <<include>>
+@enduml
