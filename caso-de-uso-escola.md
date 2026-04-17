@@ -26,6 +26,6 @@ flowchart LR
     UC3 -. <<include>> .-> UC5
     UC4 -. <<include>> .-> UC5
 
-    UC2 -. <<extend>> .-> UC6
-    UC5 -. <<extend>> .-> UC7
+    UC2 -. extend .-> UC6
+    UC5 -. extend .-> UC7
 
