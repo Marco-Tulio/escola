@@ -43,8 +43,3 @@ Permitir que o aluno consulte suas notas no sistema escolar.
 1. No passo 6 do fluxo principal, o sistema verifica que não há notas registradas.
 2. O sistema exibe a mensagem **Nenhuma nota disponível no momento**.
 3. O caso de uso é encerrado.
-
-## Regras de Negócio
-- O aluno só pode visualizar suas próprias notas.
-- Apenas usuários autenticados podem acessar informações acadêmicas.
-- As notas exibidas devem corresponder ao período letivo selecionado.
