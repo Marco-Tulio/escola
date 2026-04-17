@@ -13,6 +13,10 @@ Permitir que o aluno consulte suas notas no sistema escolar.
 ## Pós-condições
 - As notas do aluno são exibidas na tela.
 
+## Diagrama de Caso de Uso
+
+![Diagrama de Caso de Uso](imagens/caso-de-uso-escola.png)
+
 ## Fluxo Principal
 1. O aluno acessa o sistema escolar.
 2. O sistema solicita as credenciais de acesso.
@@ -28,20 +32,8 @@ Permitir que o aluno consulte suas notas no sistema escolar.
 2. O sistema gera a visualização do boletim.
 3. O sistema exibe o boletim ao aluno.
 
-### A2. Emitir boletim em PDF
-1. Após visualizar o boletim, o aluno seleciona a opção **Emitir boletim em PDF**.
-2. O sistema gera o arquivo em PDF.
-3. O sistema disponibiliza o arquivo para download.
-
 ## Fluxo de Exceção
 ### E1. Credenciais inválidas
 1. No passo 4 do fluxo principal, o sistema identifica que o login ou a senha estão incorretos.
 2. O sistema exibe uma mensagem de erro.
 3. O sistema retorna à tela de autenticação.
-
-### E2. Aluno sem notas lançadas
-1. No passo 6 do fluxo principal, o sistema verifica que não há notas registradas.
-2. O sistema exibe a mensagem **Nenhuma nota disponível no momento**.
-3. O caso de uso é encerrado.
-
-![Diagrama de Caso de Uso](imagens/caso-de-uso-escola.png)
