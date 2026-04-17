@@ -21,11 +21,11 @@ flowchart LR
     Professor --> UC3
     Secretaria --> UC4
 
-    UC1 -. "<<include>>" .-> UC5
-    UC2 -. "<<include>>" .-> UC5
-    UC3 -. "<<include>>" .-> UC5
-    UC4 -. "<<include>>" .-> UC5
+    UC1 -. <<include>> .-> UC5
+    UC2 -. <<include>> .-> UC5
+    UC3 -. <<include>> .-> UC5
+    UC4 -. <<include>> .-> UC5
 
-    UC2 -. "<<extend>>" .-> UC6
-    UC5 -. "<<extend>>" .-> UC7
+    UC2 -. <<extend>> .-> UC6
+    UC5 -. <<extend>> .-> UC7
 
