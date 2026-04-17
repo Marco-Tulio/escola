@@ -1,0 +1,50 @@
+@startuml
+
+' Define que o diagrama será organizado da esquerda para a direita
+left to right direction
+skinparam actorStyle awesome
+
+' Declara os atores do sistema
+actor Aluno
+actor Professor
+actor Secretaria
+
+' Define o limite do sistema
+' Tudo dentro do rectangle representa funcionalidades do SistemaEscolar
+rectangle SistemaEscolar {
+
+  ' Casos de uso do sistema
+  ' "as UC1" cria um apelido interno para facilitar as ligações depois
+  usecase "Consultar notas" as UC1
+  usecase "Ver boletim" as UC2
+  usecase "Lançar notas" as UC3
+  usecase "Cadastrar aluno" as UC4
+  usecase "Autenticar usuário" as UC5
+  usecase "Emitir boletim em PDF" as UC6
+  usecase "Recuperar senha" as UC7
+}
+
+' Associações entre atores e casos de uso
+' A seta --> indica que o ator participa daquele caso de uso
+Aluno --> UC1
+Aluno --> UC2
+Professor --> UC3
+Secretaria --> UC4
+
+' Relações de include
+' <<include>> representa um comportamento obrigatório e reutilizado
+' Exemplo: para consultar notas, o usuário precisa se autenticar
+UC1 ..> UC5 : <<include>>
+UC2 ..> UC5 : <<include>>
+UC3 ..> UC5 : <<include>>
+UC4 ..> UC5 : <<include>>
+
+' Relações de extend
+' <<extend>> representa um comportamento opcional ou complementar
+' Exemplo: ao ver boletim, pode haver a opção de emitir PDF
+UC2 ..> UC6 : <<extend>>
+
+' Durante a autenticação, pode existir a opção de recuperar senha
+UC5 ..> UC7 : <<extend>>
+
+@enduml
